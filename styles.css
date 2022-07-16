@@ -1,0 +1,101 @@
+:root {
+	--cell-size: 100px;
+
+	--color: #81c3fd; /* for hover */
+	--color-set: #0275d8; /* when set */
+	--l: 10px; /* X line-width */
+}
+
+body {
+	margin: 0;
+    background-color: #81c3fd;
+}
+
+.board {
+    position: relative;
+    top: -150px;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(3, auto)
+}
+
+.winning-message {
+    position: relative;
+    top: -245px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#winningMessageText {
+    font-weight: 600;
+}
+
+#restartButton {
+    font-size: 20px;
+    background-color: #FFFD98;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+#restartButton:hover {
+    background-color: #fffd98bd;
+}
+
+.cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-size: bolder;
+}
+
+.cell:hover {
+    background-color: #81c3fd98;
+}
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+	border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+	border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+	border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+	border-bottom: none;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:4em;
+    position: relative;
+    top: -10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
